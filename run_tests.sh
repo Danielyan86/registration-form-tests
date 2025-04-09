@@ -12,4 +12,4 @@ export PYTHONPATH=$PYTHONPATH:$SCRIPT_DIR
 
 # Run tests with timestamp in the output directory
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-robot --outputdir "${RESULTS_DIR}/${TIMESTAMP}" tests/test_cases/registration_tests.robot 
+robot --outputdir "${RESULTS_DIR}/${TIMESTAMP}" tests/robot_test_cases/registration_tests.robot 

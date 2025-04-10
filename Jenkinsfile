@@ -15,7 +15,7 @@ pipeline {
                 sh '''
                     docker run --rm \
                         -v ${WORKSPACE}/results:/app/results \
-                        qa-registration:${BUILD_NUMBER}
+                        qa-registration
                 '''
             }
             post {

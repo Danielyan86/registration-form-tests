@@ -25,7 +25,7 @@ pipeline {
                     // Process robot results with error handling
                     script {
                         try {
-                            robot outputPath: 'results/output.xml'
+                            robot outputPath: 'results'
                         } catch (Exception e) {
                             echo "Warning: Failed to process robot results: ${e.message}"
                             currentBuild.result = 'UNSTABLE'

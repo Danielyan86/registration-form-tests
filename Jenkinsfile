@@ -20,8 +20,9 @@ pipeline {
             }
             post {
                 always {
+                    robot outputPath: 'results/output.xml'
+                    
                     archiveArtifacts artifacts: 'results/**', allowEmptyArchive: true
-                    junit 'results/output.xml'
                 }
             }
         }

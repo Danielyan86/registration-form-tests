@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -platform=linux/amd64  -t qa-registration:${BUILD_NUMBER} .'
+                sh 'docker build -platform=linux/amd64  -t qa-registration .'
             }
         }
         

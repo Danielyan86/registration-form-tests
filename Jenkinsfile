@@ -1,5 +1,7 @@
 pipeline {
-    agent MacAgentLocal
+    agent {
+        label 'MacAgentLocal'
+    }
     
     stages {
         stage('Build Docker Image') {

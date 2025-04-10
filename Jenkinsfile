@@ -21,8 +21,7 @@ pipeline {
             post {
                 always {
                     archiveArtifacts artifacts: 'results/**', allowEmptyArchive: true
-                    
-                    // Process robot results with error handling
+
                     script {
                         try {
                             robot outputPath: 'results'
@@ -37,9 +36,7 @@ pipeline {
     }
     
     post {
-        always {
-            cleanWs()
-        }
+
         success {
             echo 'Tests completed successfully!'
         }

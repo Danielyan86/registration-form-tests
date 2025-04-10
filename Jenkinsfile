@@ -6,19 +6,17 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build('qa-registration:${BUILD_NUMBER}')
-                }
+                sh 'docker build -t qa-registration:${BUILD_NUMBER} .'
             }
         }
         
         stage('Run Tests') {
             steps {
-                script {
-                    docker.image('qa-registration:${BUILD_NUMBER}').inside {
-                        sh 'robot -d results tests/robot_test_cases'
-                    }
-                }
+                sh '''
+                    docker run --rm \
+                        -v ${WORKSPACE}/results:/app/results \
+                        qa-registration:${BUILD_NUMBER}
+                '''
             }
             post {
                 always {

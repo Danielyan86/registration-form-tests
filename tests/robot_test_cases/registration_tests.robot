@@ -7,11 +7,11 @@ Test Teardown          End Browser
 
 *** Variables ***
 # Test data
-${VALID_FIRST_NAME}    John
-${VALID_LAST_NAME}     Doe
-${VALID_PHONE}         02902243881
+${VALID_FIRST_NAME}    Xiaodong
+${VALID_LAST_NAME}     Yang
+${VALID_PHONE}         0298888888
 ${VALID_COUNTRY}       New Zealand
-${VALID_EMAIL}         john.doe@example.com
+${VALID_EMAIL}         xiaodong.yang@example.com
 ${VALID_PASSWORD}      password123
 ${INVALID_EMAIL}       invalid_email
 
